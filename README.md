@@ -56,7 +56,7 @@ npm run dev
 
 ## 🌐 Live Demo
 
-**Production URL**: https://vulk-pitch.netlify.app
+**Production URL**: https://k0d-pitch-deck.netlify.app
 
 ## 📈 Investment Highlights
 
@@ -72,7 +72,7 @@ The pitch deck is password-protected. Contact the VULK team for access credentia
 
 ## 📞 Contact
 
-- **Company**: VULK® Technologies
+- **Company**: VULK®
 - **Website**: Coming soon
 - **Email**: Contact through pitch deck
 
