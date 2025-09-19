@@ -56,7 +56,7 @@ npm run dev
 
 ## 🌐 Live Demo
 
-**Production URL**: https://k0d-pitch-deck.netlify.app
+**Production URL**: https://vulk-pitch.netlify.app
 
 ## 📈 Investment Highlights
 
