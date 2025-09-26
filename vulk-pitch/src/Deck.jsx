@@ -10,7 +10,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
  */
 
 const Section = ({ children }) => (
-  <div className="prose prose-invert w-full">{children}</div>
+  <div className="w-full">{children}</div>
 );
 
 const SlideShell = ({
