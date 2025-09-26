@@ -9,6 +9,65 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
  * Tech: Tailwind + React (shadcn/ui opcional). Tudo num único componente export default.
  */
 
+// Password protection component
+function PasswordProtection({ onUnlock }) {
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
+    // Simulate password check
+    setTimeout(() => {
+      if (password === 'k0d2025') {
+        onUnlock();
+      } else {
+        setError('Password incorreta. Tenta novamente.');
+      }
+      setIsLoading(false);
+    }, 500);
+  };
+
+  return (
+    <div className="fixed inset-0 bg-[#0b0d10] flex items-center justify-center z-50">
+      <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-10 max-w-md w-full mx-4 text-center">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-white mb-2">VULK® Pitch Deck</h1>
+          <p className="text-white/60">Introduz a password para aceder</p>
+        </div>
+        
+        <form onSubmit={handleSubmit}>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/15 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 mb-4"
+            required
+          />
+          
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full px-6 py-3 bg-white/10 hover:bg-white/15 border border-white/15 text-white font-medium transition-colors disabled:opacity-50 rounded-xl"
+          >
+            {isLoading ? 'A verificar...' : 'Aceder'}
+          </button>
+        </form>
+        
+        {error && <div className="text-red-400 mt-4 text-sm">{error}</div>}
+        
+        <div className="mt-6 text-xs text-white/60">
+          Contacto: investors@k0d.pro
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const Section = ({ children }) => (
   <div className="w-full">{children}</div>
 );
@@ -1239,6 +1298,7 @@ export default function Deck() {
   const [index, setIndex] = useState(0);
   const [showTOC, setShowTOC] = useState(true);
   const [isDark, setIsDark] = useState(true);
+  const [isUnlocked, setIsUnlocked] = useState(false);
   const total = slides.length;
   const current = slides[index];
   const containerRef = useRef(null);
@@ -1254,6 +1314,10 @@ export default function Deck() {
   }, [total]);
 
   const progress = useMemo(() => ((index + 1) / total) * 100, [index, total]);
+
+  if (!isUnlocked) {
+    return <PasswordProtection onUnlock={() => setIsUnlocked(true)} />;
+  }
 
   return (
     <div className={`w-full h-[90vh] sm:h-screen relative overflow-hidden transition-colors duration-300 ${
