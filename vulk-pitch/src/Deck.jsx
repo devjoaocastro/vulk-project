@@ -25,7 +25,7 @@ function PasswordProtection({ onUnlock }) {
       if (password === 'vulk2025') {
         onUnlock();
       } else {
-        setError('Password incorreta. Tenta novamente.');
+        setError('Incorrect password. Please try again.');
       }
       setIsLoading(false);
     }, 500);
@@ -36,7 +36,7 @@ function PasswordProtection({ onUnlock }) {
       <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-10 max-w-md w-full mx-4 text-center">
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-white mb-2">VULK® Pitch Deck</h1>
-          <p className="text-white/60">Introduz a password para aceder</p>
+          <p className="text-white/60">Enter password to access</p>
         </div>
         
         <form onSubmit={handleSubmit}>
@@ -54,14 +54,14 @@ function PasswordProtection({ onUnlock }) {
             disabled={isLoading}
             className="w-full px-6 py-3 bg-white/10 hover:bg-white/15 border border-white/15 text-white font-medium transition-colors disabled:opacity-50 rounded-xl"
           >
-            {isLoading ? 'A verificar...' : 'Aceder'}
+            {isLoading ? 'Verifying...' : 'Access'}
           </button>
         </form>
         
         {error && <div className="text-red-400 mt-4 text-sm">{error}</div>}
         
         <div className="mt-6 text-xs text-white/60">
-          Contacto: investors@k0d.pro
+          Contact: hello@code-ahead.com
         </div>
       </div>
     </div>
