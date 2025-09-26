@@ -22,7 +22,7 @@ function PasswordProtection({ onUnlock }) {
 
     // Simulate password check
     setTimeout(() => {
-      if (password === 'k0d2025') {
+      if (password === 'vulk2025') {
         onUnlock();
       } else {
         setError('Password incorreta. Tenta novamente.');
