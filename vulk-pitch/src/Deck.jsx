@@ -1342,7 +1342,7 @@ export default function Deck() {
       </div>
 
       {/* Controls */}
-      <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3">
+      <div className="fixed bottom-4 left-4 right-4 flex items-center gap-3 z-10">
         <button
           onClick={() => setIndex((i) => Math.max(0, i - 1))}
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl transition ${
