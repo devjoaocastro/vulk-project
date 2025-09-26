@@ -172,7 +172,7 @@ const slides = [
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-8">
           <KeyMetric label="Stage" value="Pre‑Launch" note="v0.2 95% • v0.3 Live" />
           <KeyMetric label="Ask (Pre‑Seed)" value="€35k" note="Cap €2.5M" />
-          <KeyMetric label="Seed (Next)" value="€5M" note="Cap €25M" />
+          <KeyMetric label="Seed (Next)" value="€350k" note="Cap €2.5M" />
           <KeyMetric label="12‑mo ARR" value="€2.4M" note="Projection" />
         </div>
         
@@ -220,7 +220,7 @@ const slides = [
           <ul className="list-disc pl-5 space-y-1">
             <Bullet>Market: $50B+ DevTools • 27M+ devs</Bullet>
             <Bullet>Traction: 0 → €500k ARR (12 months, pre-launch)</Bullet>
-            <Bullet>Ask: €35k Pre‑Seed (cap €2.5M) → Seed €5M (cap €25M)</Bullet>
+            <Bullet>Ask: €35k Pre‑Seed (cap €2.5M) → Seed €350k (cap €2.5M)</Bullet>
             <Bullet>Exit: 5–7 years → €500M realistic</Bullet>
             <Bullet>ROI realistic: 100× by 2029</Bullet>
           </ul>
@@ -918,7 +918,7 @@ const slides = [
           <div>
             <h3 className="text-lg font-semibold">Seed (next)</h3>
             <ul className="list-disc pl-5 mt-2 space-y-1">
-              <Bullet>€5M @ €25M cap</Bullet>
+              <Bullet>€350k @ €2.5M cap</Bullet>
               <Bullet>50% Eng (AI/Core), 25% Sales, 15% Mkt/Community, 10% Legal</Bullet>
             </ul>
           </div>
@@ -984,7 +984,7 @@ const slides = [
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
           <h3 className="text-lg font-semibold mb-4 text-blue-400 flex items-center gap-2">
             <Rocket size={20} />
-            Medium Term (12-24 months) — €5M Seed Conditions
+            Medium Term (12-24 months) — €350k Seed Conditions
           </h3>
           <div className="grid sm:grid-cols-2 gap-6">
             <div>
@@ -1009,7 +1009,7 @@ const slides = [
           </div>
           <div className="mt-4 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
             <p className="text-sm text-blue-200">
-              <strong>Seed Round:</strong> €5M @ €25M cap (only if conditions met)
+              <strong>Seed Round:</strong> €350k @ €2.5M cap (only if conditions met)
             </p>
           </div>
         </div>
@@ -1070,7 +1070,7 @@ const slides = [
         {/* Investment Terms */}
         <div className="grid sm:grid-cols-2 gap-4">
           <KeyMetric label="Pre-Seed Round" value="€35k" note="€2.5M cap" tooltip="Initial investment round" />
-          <KeyMetric label="Seed Conditions" value="€5M" note="€25M cap" tooltip="Next round if milestones met" />
+          <KeyMetric label="Seed Conditions" value="€350k" note="€2.5M cap" tooltip="Next round if milestones met" />
           <KeyMetric label="Conservative ARR" value="€10M" note="Year 5 target" tooltip="Realistic revenue projection" />
           <KeyMetric label="Conservative ROI" value="20×" note="Pre-seed to exit" tooltip="Conservative return on investment" />
         </div>
