@@ -1304,6 +1304,8 @@ export default function Deck() {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    if (!isUnlocked) return;
+    
     const onKey = (e) => {
       if (e.key === "ArrowRight" || e.key.toLowerCase() === "l") setIndex((i) => Math.min(i + 1, total - 1));
       if (e.key === "ArrowLeft" || e.key.toLowerCase() === "h") setIndex((i) => Math.max(i - 1, 0));
@@ -1311,7 +1313,7 @@ export default function Deck() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [total]);
+  }, [total, isUnlocked]);
 
   const progress = useMemo(() => ((index + 1) / total) * 100, [index, total]);
 
