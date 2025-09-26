@@ -1,0 +1,43 @@
+{
+  "name": "vulk-ragg-system",
+  "version": "1.0.0",
+  "description": "VULK® RAGG (Retrieval-Augmented Generation with Governance) System",
+  "scripts": {
+    "index-sites": "node scripts/index-sites.js",
+    "index-popular": "node scripts/index-popular-sites.js",
+    "ragg:generate": "node scripts/index-sites.js generate",
+    "ragg:search": "node scripts/index-sites.js search",
+    "ragg:list": "node scripts/index-sites.js list"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^2.6.4",
+    "@supabase/supabase-js": "^2.39.0",
+    "puppeteer": "^21.6.1",
+    "cheerio": "^1.0.0-rc.12",
+    "memfs": "^3.5.0",
+    "chokidar": "^3.5.3",
+    "commander": "^11.1.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "lighthouse": "^11.4.0",
+    "webdriverio": "^8.24.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^7.0.4",
+    "@types/cheerio": "^0.22.31",
+    "@types/memfs": "^3.4.0",
+    "@types/chokidar": "^3.5.9"
+  },
+  "keywords": [
+    "vulk",
+    "ragg",
+    "ai",
+    "code-generation",
+    "visual-styles",
+    "puppeteer",
+    "huggingface",
+    "vector-search"
+  ],
+  "author": "VULK® Team",
+  "license": "MIT"
+}

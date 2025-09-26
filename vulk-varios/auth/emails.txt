@@ -1,0 +1,4 @@
+# List of allowed emails, one per line. Keep this private.
+# If you prefer restricting by GitHub username, set OAUTH2_PROXY_GITHUB_USERS=devjoaocastro instead.
+# Replace the example below with your actual GitHub account email (public or primary):
+# devjoaocastro@example.com
