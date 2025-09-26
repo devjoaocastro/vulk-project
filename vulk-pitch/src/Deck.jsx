@@ -201,18 +201,28 @@ const MarketShareChart = () => {
 
 function KeyMetric({ label, value, note, tooltip }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6 min-w-[140px]">
+    <div className={`rounded-2xl border p-5 sm:p-6 min-w-[140px] ${
+      isDark 
+        ? 'border-white/10 bg-white/5' 
+        : 'border-gray-200 bg-gray-50'
+    }`}>
       <div className="text-2xl sm:text-3xl font-semibold tracking-tight break-words">{value}</div>
-      <div className="text-sm sm:text-base text-white/70 mt-1">
+      <div className={`text-sm sm:text-base mt-1 ${
+        isDark ? 'text-white/70' : 'text-gray-600'
+      }`}>
         {tooltip ? (
           <CustomTooltip content={tooltip}>
-            <span className="cursor-help border-b border-dotted border-white/30">{label}</span>
+            <span className={`cursor-help border-b border-dotted ${
+              isDark ? 'border-white/30' : 'border-gray-400'
+            }`}>{label}</span>
           </CustomTooltip>
         ) : (
           label
         )}
       </div>
-      {note && <div className="text-xs text-white/50 mt-2 break-words">{note}</div>}
+      {note && <div className={`text-xs mt-2 break-words ${
+        isDark ? 'text-white/50' : 'text-gray-500'
+      }`}>{note}</div>}
     </div>
   );
 }
@@ -225,9 +235,9 @@ const slides = [
     icon: <Rocket size={18} />,
     content: (
       <div>
-        <div className="text-sm tracking-widest text-white/70">INVESTOR PITCH • v1.0 • January 2025</div>
-        <h1 className="mt-3 text-3xl sm:text-5xl font-semibold leading-tight">The end of coding as we know it. <span className="text-white/60">Start building by intention.</span></h1>
-        <p className="mt-4 text-white/80">"Not just a startup — it's the software development revolution." — VULK® Team</p>
+        <div className={`text-sm tracking-widest ${isDark ? 'text-white/70' : 'text-gray-600'}`}>INVESTOR PITCH • v1.0 • January 2025</div>
+        <h1 className="mt-3 text-3xl sm:text-5xl font-semibold leading-tight">The end of coding as we know it. <span className={isDark ? 'text-white/60' : 'text-gray-500'}>Start building by intention.</span></h1>
+        <p className={`mt-4 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>"Not just a startup — it's the software development revolution." — VULK® Team</p>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-8">
           <KeyMetric label="Stage" value="Pre‑Launch" note="v0.2 95% • v0.3 Live" />
           <KeyMetric label="Ask (Pre‑Seed)" value="€35k" note="Cap €2.5M" />
@@ -248,7 +258,9 @@ const slides = [
                 e.target.nextElementSibling.style.display = 'block';
               }}
             />
-            <div className="hidden text-center text-white/60 py-8">
+            <div className={`hidden text-center py-8 ${
+              isDark ? 'text-white/60' : 'text-gray-500'
+            }`}>
               <div className="text-sm">Screenshot do sistema VULK</div>
               <div className="text-xs mt-2">Interface real do produto</div>
             </div>
@@ -454,7 +466,7 @@ const slides = [
                 <Heart size={18} />
                 Healthcare Management System
               </h4>
-              <p className="text-sm text-white/80 mb-3">"Create a complete hospital management system with patient records, appointment scheduling, billing, and telemedicine"</p>
+              <p className={`text-sm mb-3 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>"Create a complete hospital management system with patient records, appointment scheduling, billing, and telemedicine"</p>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between"><span>Patient Management:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>Appointment System:</span><CheckCircle size={16} className="text-green-400" /></div>
@@ -462,7 +474,7 @@ const slides = [
                 <div className="flex justify-between"><span>Telemedicine:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>Analytics Dashboard:</span><CheckCircle size={16} className="text-green-400" /></div>
               </div>
-              <div className="mt-3 text-xs text-white/60">→ 12 minutes vs 18 months (€500k+)</div>
+              <div className={`mt-3 text-xs ${isDark ? 'text-white/60' : 'text-gray-500'}`}>→ 12 minutes vs 18 months (€500k+)</div>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -470,7 +482,7 @@ const slides = [
                 <CreditCard size={18} />
                 Banking Platform
               </h4>
-              <p className="text-sm text-white/80 mb-3">"Build a full banking platform with accounts, transfers, loans, investments, and compliance reporting"</p>
+              <p className={`text-sm mb-3 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>"Build a full banking platform with accounts, transfers, loans, investments, and compliance reporting"</p>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between"><span>Account Management:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>Payment Processing:</span><CheckCircle size={16} className="text-green-400" /></div>
@@ -478,7 +490,7 @@ const slides = [
                 <div className="flex justify-between"><span>Investment Tools:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>Compliance Reports:</span><CheckCircle size={16} className="text-green-400" /></div>
               </div>
-              <div className="mt-3 text-xs text-white/60">→ 15 minutes vs 24 months (€1M+)</div>
+              <div className={`mt-3 text-xs ${isDark ? 'text-white/60' : 'text-gray-500'}`}>→ 15 minutes vs 24 months (€1M+)</div>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -486,7 +498,7 @@ const slides = [
                 <Factory size={18} />
                 Manufacturing ERP
               </h4>
-              <p className="text-sm text-white/80 mb-3">"Create an enterprise resource planning system with inventory, production, quality control, and supply chain"</p>
+              <p className={`text-sm mb-3 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>"Create an enterprise resource planning system with inventory, production, quality control, and supply chain"</p>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between"><span>Inventory Management:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>Production Planning:</span><CheckCircle size={16} className="text-green-400" /></div>
@@ -494,7 +506,7 @@ const slides = [
                 <div className="flex justify-between"><span>Supply Chain:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>IoT Integration:</span><CheckCircle size={16} className="text-green-400" /></div>
               </div>
-              <div className="mt-3 text-xs text-white/60">→ 18 minutes vs 30 months (€2M+)</div>
+              <div className={`mt-3 text-xs ${isDark ? 'text-white/60' : 'text-gray-500'}`}>→ 18 minutes vs 30 months (€2M+)</div>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -502,7 +514,7 @@ const slides = [
                 <GraduationCap size={18} />
                 EdTech Platform
               </h4>
-              <p className="text-sm text-white/80 mb-3">"Build a comprehensive learning management system with courses, assessments, AI tutoring, and analytics"</p>
+              <p className={`text-sm mb-3 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>"Build a comprehensive learning management system with courses, assessments, AI tutoring, and analytics"</p>
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between"><span>Course Creation:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>AI Tutoring:</span><CheckCircle size={16} className="text-green-400" /></div>
@@ -510,7 +522,7 @@ const slides = [
                 <div className="flex justify-between"><span>Progress Analytics:</span><CheckCircle size={16} className="text-green-400" /></div>
                 <div className="flex justify-between"><span>Mobile Apps:</span><CheckCircle size={16} className="text-green-400" /></div>
               </div>
-              <div className="mt-3 text-xs text-white/60">→ 10 minutes vs 12 months (€300k+)</div>
+              <div className={`mt-3 text-xs ${isDark ? 'text-white/60' : 'text-gray-500'}`}>→ 10 minutes vs 12 months (€300k+)</div>
             </div>
           </div>
 
@@ -1003,7 +1015,7 @@ const slides = [
             <Target size={20} />
             Pre-Launch Strategy
           </h3>
-          <p className="text-sm text-white/80">Realistic expectations, high execution. Market demand drives our confidence.</p>
+          <p className={`text-sm ${isDark ? 'text-white/80' : 'text-gray-700'}`}>Realistic expectations, high execution. Market demand drives our confidence.</p>
         </div>
 
         {/* Short Term - €35k Investment */}
@@ -1081,19 +1093,19 @@ const slides = [
           </h3>
           <div className="grid sm:grid-cols-3 gap-4">
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">€75M</div>
-              <div className="text-sm text-white/70">ARR Target (realistic)</div>
-              <div className="text-xs text-white/50 mt-1">Strong growth trajectory</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>€75M</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>ARR Target (realistic)</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>Strong growth trajectory</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">€500M</div>
-              <div className="text-sm text-white/70">Valuation Target</div>
-              <div className="text-xs text-white/50 mt-1">6.7x revenue multiple</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>€500M</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>Valuation Target</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>6.7x revenue multiple</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">100×</div>
-              <div className="text-sm text-white/70">ROI for Pre-Seed</div>
-              <div className="text-xs text-white/50 mt-1">€35k → €3.5M</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>100×</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>ROI for Pre-Seed</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>€35k → €3.5M</div>
             </div>
           </div>
         </div>
@@ -1147,7 +1159,7 @@ const slides = [
             <Banknote size={20} />
             How & When We Pay Investors Back
           </h3>
-          <p className="text-sm text-white/80">Clear exit strategy with multiple options and realistic timelines</p>
+          <p className={`text-sm ${isDark ? 'text-white/80' : 'text-gray-700'}`}>Clear exit strategy with multiple options and realistic timelines</p>
         </div>
 
         {/* Exit Options */}
@@ -1186,33 +1198,33 @@ const slides = [
           <h4 className="font-semibold mb-4 text-center">Investor Returns Timeline</h4>
           <div className="grid sm:grid-cols-5 gap-4">
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">2025</div>
-              <div className="text-sm text-white/70">2× Return</div>
-              <div className="text-xs text-white/50 mt-1">€35k → €70k</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>2025</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>2× Return</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>€35k → €70k</div>
               <div className="text-xs text-green-400 mt-1">Series A</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">2026</div>
-              <div className="text-sm text-white/70">5× Return</div>
-              <div className="text-xs text-white/50 mt-1">€35k → €175k</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>2026</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>5× Return</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>€35k → €175k</div>
               <div className="text-xs text-green-400 mt-1">Series B</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">2027</div>
-              <div className="text-sm text-white/70">10× Return</div>
-              <div className="text-xs text-white/50 mt-1">€35k → €350k</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>2027</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>10× Return</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>€35k → €350k</div>
               <div className="text-xs text-green-400 mt-1">Growth Round</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">2029</div>
-              <div className="text-sm text-white/70">100× Return</div>
-              <div className="text-xs text-white/50 mt-1">€35k → €3.5M</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>2029</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>100× Return</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>€35k → €3.5M</div>
               <div className="text-xs text-green-400 mt-1">Exit Event</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">2031</div>
-              <div className="text-sm text-white/70">200× Return</div>
-              <div className="text-xs text-white/50 mt-1">€35k → €7M</div>
+              <div className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>2031</div>
+              <div className={`text-sm ${isDark ? 'text-white/70' : 'text-gray-600'}`}>200× Return</div>
+              <div className={`text-xs mt-1 ${isDark ? 'text-white/50' : 'text-gray-500'}`}>€35k → €7M</div>
               <div className="text-xs text-green-400 mt-1">IPO/Exit</div>
             </div>
           </div>
@@ -1270,7 +1282,7 @@ const slides = [
         <div className="mt-6 grid sm:grid-cols-2 gap-4">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <h3 className="text-lg font-semibold mb-2">Contacts</h3>
-            <ul className="space-y-1 text-white/80">
+            <ul className={`space-y-1 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>
               <li>Investors — investors@vulk.dev</li>
               <li>João Castro — joaocastro@vulk.dev</li>
               <li>Joana Matos — joanamatos@vulk.dev</li>
@@ -1281,7 +1293,7 @@ const slides = [
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <h3 className="text-lg font-semibold mb-2">Links</h3>
-            <ul className="space-y-1 text-white/80">
+            <ul className={`space-y-1 ${isDark ? 'text-white/80' : 'text-gray-700'}`}>
               <li>vulk.dev</li>
               <li>docs.vulk.dev</li>
               <li>status.vulk.dev</li>
