@@ -1,123 +1,91 @@
-# VULK® - Full-Stack Development Platform
+# VULK
 
-<div align="center">
-  <img src="vulk-branding/logo-vulk-01.svg" alt="VULK Logo" width="200" height="200">
-  
-  <h3>Full-Stack Applications Development</h3>
-  <p>Create complete applications with automatic API integration and instant deployment</p>
-  
-  <p>
-    <a href="#features">Features</a> •
-    <a href="#getting-started">Getting Started</a> •
-    <a href="#documentation">Documentation</a> •
-    <a href="#contributing">Contributing</a> •
-    <a href="#license">License</a>
-  </p>
-  
-  <p>
-    <a href="https://vulk.dev">Website</a> •
-    <a href="https://vulk.dev/beta">Beta Access</a> •
-    <a href="https://github.com/vulk-ai/vulk">GitHub</a>
-  </p>
-</div>
+Build real products from prompts, not just landing pages.
+
+VULK is an AI product-building platform focused on shipping outcomes:
+- Generate apps from natural language
+- Evolve code with conversational edits
+- Connect real backend/data flows
+- Publish to live URLs fast
+
+**Live:** [vulk.dev](https://vulk.dev)  
+**Docs:** [support.vulk.dev](https://support.vulk.dev)
 
 ---
 
-## What is VULK®?
+## What VULK Does
 
-VULK® is a full-stack development platform that automatically generates complete applications with integrated APIs and instant deployment capabilities.
+VULK is built for builders who want speed without losing control.
 
-### Key Features
+### Core capabilities
+- AI generation for full product flows
+- Multi-model workflow (model choice by use case)
+- Real project editing (not one-shot output)
+- Live preview and iteration
+- Deploy + custom domain flows
+- Billing and usage controls for production apps
 
-- **Full-Stack Generation**: Complete applications with frontend, backend, and database
-- **Automatic API Integration**: Seamless integration with external services and APIs
-- **Instant Deployment**: Deploy with custom domains or subdomains in seconds
-- **Multi-Provider Support**: Works with Vercel, Netlify, Cloudflare, and other services
-
-## Core Features
-
-### Full-Stack Development
-- **Complete Applications**: Generate frontend, backend, and database in one go
-- **Framework Support**: React, Vue, Svelte, Flutter with modern UI libraries
-- **Database Integration**: PostgreSQL, MySQL, MongoDB with automatic setup
-- **API Integration**: Automatic integration with external services and APIs
-
-### Automatic API Integration
-- **Service Detection**: Automatically detects required APIs and services
-- **Key Management**: Handles API keys and authentication automatically
-- **Service Configuration**: Pre-configured integrations with popular services
-- **Real-time Updates**: Live integration status and error handling
-
-### Instant Deployment
-- **One-Click Deploy**: Deploy to multiple platforms with a single click
-- **Custom Domains**: Use your own domain or get instant subdomains
-- **SSL Certificates**: Automatic HTTPS setup and certificate management
-- **Environment Management**: Separate staging and production environments
-
-### Quality Assurance
-- **Automated Testing**: Built-in testing and validation
-- **Code Quality**: Automatic linting and code formatting
-- **Security Scanning**: Built-in security checks and vulnerability detection
-- **Performance Optimization**: Automatic performance monitoring and optimization
+### Build surfaces
+- Web applications
+- Full-stack app flows (frontend + API/data patterns)
+- Flutter/mobile-oriented generation paths
+- Interactive/game-style generation paths
 
 ---
 
-## Getting Started
+## Why Teams Use VULK
 
-Register at [vulk.dev/register](https://vulk.dev/register) to get access to:
-- Full-stack application generation
-- Automatic API integration
-- Instant deployment capabilities
-- Advanced development features
-
-## Documentation
-
-- **[User Guide](docs/user-guide.md)** - Complete user documentation
-- **[API Reference](docs/api-reference.md)** - Developer API documentation
-- **[Deployment Guide](docs/deployment.md)** - Deployment best practices
-
-## Use Cases
-
-### Enterprise Development
-- **Rapid Prototyping**: Create MVPs in hours, not weeks
-- **Team Collaboration**: Real-time development and collaboration
-- **Quality Assurance**: Automated testing and code review
-- **Scalable Architecture**: Enterprise-grade deployment options
-
-### Startup & MVP Development
-- **Fast Iteration**: Rapidly prototype and test ideas
-- **Cost Effective**: Reduce development time and costs
-- **Professional Quality**: Enterprise-grade code generation
-- **Easy Deployment**: One-click deployment to production
-
-## Why VULK?
-
-### Key Benefits
-- **Complete Applications**: Generate full-stack applications with all components
-- **Automatic Integration**: Seamless API and service integration
-- **Instant Deployment**: Deploy with custom domains in seconds
-- **Professional Quality**: Enterprise-grade code and architecture
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Links
-
-- **Website**: [vulk.dev](https://vulk.dev)
-- **Register**: [vulk.dev/register](https://vulk.dev/register)
-- **Documentation**: [docs.vulk.dev](https://docs.vulk.dev)
-- **Community**: [Discord](https://discord.gg/vulk)
-- **Twitter**: [@VULK_AI](https://twitter.com/VULK_AI)
+- **Faster time-to-market**: move from idea to working product quickly
+- **Less glue work**: generation, deploy, and product ops in one flow
+- **Production mindset**: auth, billing, deployment, and observability are part of the platform direction
+- **Ownership-friendly**: workflows are designed for real product teams, not demo-only outputs
 
 ---
 
-<div align="center">
-  <p><strong>VULK® — Full-stack development platform with automatic API integration and instant deployment.</strong></p>
-  <p>Made by <a href="https://www.code-ahead.com">CodeAhead</a></p>
-  <p><strong>Leadership:</strong> CEO & CTO, Joana Matos (CEO)</p>
-</div>
+## Positioning
+
+Many AI builders are great at first drafts.
+VULK is focused on the next step: **shipping and operating real products**.
+
+If you care about polish, velocity, and production outcomes, VULK is built for you.
+
+---
+
+## Public Repo Scope
+
+This repository is a **public product-facing hub**.
+It exists to explain VULK clearly and keep the public narrative aligned.
+
+Core platform source remains private while we harden and evolve production systems.
+
+---
+
+## Current Focus
+
+- Better generation reliability for complex projects
+- Stronger deploy and domain workflows
+- Better editing continuity between prompt rounds
+- More predictable cost/performance controls
+
+---
+
+## Product Links
+
+- Website: [vulk.dev](https://vulk.dev)
+- Help center: [support.vulk.dev](https://support.vulk.dev)
+- Pricing: [vulk.dev/pricing](https://vulk.dev/pricing)
+- Showcase: [vulk.dev/showcase](https://vulk.dev/showcase)
+
+---
+
+## Also in the ecosystem
+
+- Pulso: [github.com/devjoaocastro/pulso](https://github.com/devjoaocastro/pulso)
+
+---
+
+## Contact
+
+For partnerships, product feedback, or enterprise interest:
+- [support.vulk.dev](https://support.vulk.dev)
+
