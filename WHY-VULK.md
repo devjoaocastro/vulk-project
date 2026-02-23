@@ -40,12 +40,3 @@ The hard part is shipping a real product with deploy, data, and operational cont
 
 That is where VULK is focused.
 
-## References
-
-Official product pages used for category context:
-- v0: https://v0.dev/pricing
-- Replit: https://replit.com/ai
-- Lovable: https://lovable.dev/pricing
-- Cursor: https://cursor.com/pricing
-- Bolt: https://bolt.new
-
