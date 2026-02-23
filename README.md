@@ -71,6 +71,8 @@ Core platform source remains private while we harden and evolve production syste
 
 ## Product Links
 
+
+- Positioning: [WHY-VULK.md](./WHY-VULK.md)
 - Website: [vulk.dev](https://vulk.dev)
 - Help center: [support.vulk.dev](https://support.vulk.dev)
 - Pricing: [vulk.dev/pricing](https://vulk.dev/pricing)
